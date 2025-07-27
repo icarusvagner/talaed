@@ -1,0 +1,27 @@
+[package]
+name = "talaed-utils"
+version.workspace = true
+authors.workspace = true
+description.workspace = true
+license.workspace = true
+edition.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+talaed-error.workspace = true
+talaed-config.workspace = true
+
+chrono.workspace = true
+csv.workspace = true
+gloo.workspace = true
+humantime.workspace = true
+reqwasm.workspace = true
+ron.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tauri-sys.workspace = true
+wasm-bindgen.workspace = true
+web-sys.workspace = true
+

@@ -1,0 +1,38 @@
+[package]
+name = "lib-web"
+version.workspace = true
+authors.workspace = true
+description.workspace = true
+license.workspace = true
+edition.workspace = true
+
+[dependencies]
+# -- App Libs
+lib-utils.workspace = true
+lib-rpc-core.workspace = true
+lib-auth.workspace = true
+lib-core.workspace = true
+
+# -- Async
+tokio.workspace = true
+# -- Json
+serde.workspace = true
+serde_json.workspace = true
+serde_with.workspace = true
+# -- Web
+axum.workspace = true
+tower-http.workspace = true
+tower-cookies.workspace = true
+# -- Tracing
+tracing.workspace = true
+tracing-subscriber.workspace = true
+# -- Rpc
+rpc-router.workspace = true
+# -- Others
+time.workspace = true
+uuid.workspace = true
+strum_macros.workspace = true
+derive_more.workspace = true
+
+[lints]
+workspace = true

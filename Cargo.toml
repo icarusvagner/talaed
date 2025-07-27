@@ -1,0 +1,316 @@
+[workspace]
+members = [
+    "crates/libs/*",
+    "crates/services/web-server",
+    "crates/tools/gen-key",
+
+    #--- Frontend libraries
+    "frontend",
+    "shared/*",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+authors = ["icarus vagner <ruthakaza@gmail.com>"]
+description = "A cross-platform application for education that helps students and teachers/instructor"
+license = "LGPL"
+edition = "2024"
+
+[workspace.dependencies]
+base64 = "0.22"
+blake3 = "1.5.5"
+chrono = "0.4.26"
+clone-macro = "0.1.0"
+console_error_panic_hook = "0.1.7"
+console_log = "1"
+csv = "1.2.2"
+enum_dispatch = "0.3"
+futures = "0.3.28"
+hmac = "0.12"
+html-escape = "0.2.13"
+humantime = "2.1.0"
+isocountry = "0.3.2"
+lazy-regex = "3"
+dotenv = "0.15"
+
+phosphor-leptos = "0.8.0"
+icondata = "0.6"
+icondata_core = "0.1"
+leptos_dom = "0.8.5"
+leptos_icons = "0.7"
+leptos_meta = "0.8.5"
+leptos_router = "0.8.5"
+
+log = "0.4"
+num-format = "0.4.4"
+paste = "1"
+reqwasm = "0.5.0"
+ron = "0.10.1"
+rust-i18n = "3.0.0"
+sea-query = "0.32"
+serde-xml-rs = "0.8.1"
+serde_json = "1.0.105"
+sha2 = "0.10"
+strum_macros = "0.27"
+thiserror = "2"
+toml = "0.9.2"
+tower-cookies = "0.11"
+tracing = "0.1"
+tracing-subscriber-wasm = "0.1"
+urlencoding = "2.1.3"
+wasm-bindgen = "0.2.92"
+wasm-bindgen-test = "0.3.37"
+
+[workspace.dependencies.argon2]
+version = "0.5"
+features = ["std"]
+
+[workspace.dependencies.axum]
+version = "0.8"
+features = ["macros"]
+
+[workspace.dependencies.derive_more]
+version = "2"
+features = [
+    "from",
+    "display",
+]
+
+[workspace.dependencies.gloo]
+version = "0.11.0"
+features = [
+    "file",
+    "futures",
+]
+
+[workspace.dependencies.leptoaster]
+version = "0.2"
+features = ["csr"]
+
+[workspace.dependencies.leptos]
+version = "0.8.5"
+features = [
+    "csr",
+    "nightly",
+]
+
+[workspace.dependencies.leptos-use]
+version = "0.16"
+features = [
+    "storage",
+    "use_event_listener",
+    "on_click_outside",
+    "use_window_focus",
+    "use_window_scroll",
+    "use_window_size",
+]
+
+[workspace.dependencies.leptos_query]
+version = "0.5"
+features = ["csr"]
+
+[workspace.dependencies.lib-auth]
+path = "./crates/libs/lib-auth"
+
+[workspace.dependencies.lib-core]
+path = "./crates/libs/lib-core"
+
+[workspace.dependencies.lib-rpc-core]
+path = "./crates/libs/lib-rpc-core"
+
+[workspace.dependencies.lib-utils]
+path = "./crates/libs/lib-utils"
+
+[workspace.dependencies.lib-web]
+path = "./crates/libs/lib-web"
+
+[workspace.dependencies.talaed-utils]
+path = "./shared/utils"
+
+[workspace.dependencies.talaed-error]
+path = "./shared/error"
+
+[workspace.dependencies.talaed-config]
+path = "./shared/config"
+
+[workspace.dependencies.modql]
+version = "0.4.1"
+features = ["with-sea-query"]
+
+[workspace.dependencies.rpc-router]
+version = "=0.1.3"
+
+[workspace.dependencies.sea-query-binder]
+version = "0.7"
+features = [
+    "sqlx-postgres",
+    "with-uuid",
+    "with-time",
+]
+
+[workspace.dependencies.serde]
+version = "1.0.188"
+features = ["derive"]
+
+[workspace.dependencies.serde_with]
+version = "3"
+features = ["time_0_3"]
+
+[workspace.dependencies.sqlx]
+version = "0.8"
+features = [
+    "macros",
+    "runtime-tokio",
+    "postgres",
+    "uuid",
+]
+
+[workspace.dependencies.strum]
+version = "0.27"
+features = [
+    "derive",
+    "strum_macros",
+]
+
+[workspace.dependencies.tauri]
+version = "2.7.0"
+default-features = false
+
+[workspace.dependencies.tauri-sys]
+git = "https://github.com/opensourcecheemsburgers/tauri-sys"
+features = ["all"]
+
+[workspace.dependencies.time]
+version = "0.3"
+features = [
+    "formatting",
+    "parsing",
+    "serde",
+]
+
+[workspace.dependencies.tokio]
+version = "1"
+features = ["full"]
+
+[workspace.dependencies.tower-http]
+version = "0.6"
+features = ["fs"]
+
+[workspace.dependencies.tracing-subscriber]
+version = "0.3"
+features = ["env-filter"]
+
+[workspace.dependencies.uuid]
+version = "1"
+features = [
+    "v4",
+    "v7",
+    "fast-rng",
+]
+
+[workspace.dependencies.web-sys]
+version = "0.3.64"
+features = [
+    "Navigator",
+    "HtmlAudioElement",
+    "HtmlMediaElement",
+    "HtmlVideoElement",
+    "Performance",
+    "Window",
+    "TextTrack",
+    "TextTrackMode",
+    "TextTrackList",
+    "MouseEvent",
+    "PointerEvent",
+    "Screen",
+    "ScreenOrientation",
+    "OrientationLockType",
+    "Document",
+    "File",
+    "FileList",
+    "DomParser",
+    "SupportedType",
+]
+
+[workspace.lints.clippy.all]
+level = "warn"
+priority = 5
+
+[workspace.lints.clippy.empty_structs_with_brackets]
+level = "allow"
+priority = 5
+
+[workspace.lints.clippy.future_not_send]
+level = "allow"
+priority = 5
+
+[workspace.lints.clippy.missing_errors_doc]
+level = "allow"
+priority = 5
+
+[workspace.lints.clippy.module_name_repetitions]
+level = "allow"
+priority = 5
+
+[workspace.lints.clippy.multiple_crate_versions]
+level = "allow"
+priority = 5
+
+[workspace.lints.clippy.must_use_candidate]
+level = "allow"
+priority = 5
+
+[workspace.lints.clippy.needless_pass_by_value]
+level = "allow"
+priority = 5
+
+[workspace.lints.clippy.nursery]
+level = "warn"
+priority = 5
+
+[workspace.lints.clippy.pedantic]
+level = "warn"
+priority = 5
+
+[workspace.lints.clippy.pub_use]
+level = "allow"
+priority = 5
+
+[workspace.lints.clippy.redundant_closure_for_method_calls]
+level = "allow"
+priority = 5
+
+[workspace.lints.clippy.unused_async]
+level = "allow"
+priority = 5
+
+[workspace.lints.clippy.unwrap_used]
+level = "forbid"
+priority = 5
+
+[workspace.lints.rust.dead_code]
+level = "allow"
+priority = 5
+
+[workspace.lints.rust.unsafe_code]
+level = "forbid"
+priority = 5
+
+[workspace.lints.rust.unused]
+level = "allow"
+priority = 5
+
+[profile.dev]
+opt-level = 0
+lto = "off"
+codegen-units = 256
+debug = 0
+incremental = true
+
+[profile.release]
+opt-level = "z"
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true

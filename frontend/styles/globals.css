@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-lato);
+}
+
+:root {
+  --montserrat: "Montserrat", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --lato: "Lato", sans-serif;
+  --tangerine: #f18701ff;
+  --selective-yellow: #f7b801ff;
+  --medium-slate-blue: #7678edff;
+  --tekhelet: #3d348bff;
+  --persimmon: #f35b04ff;
+}
+
+@theme {
+  /* For colors */
+  --color-tangerine: var(--tangerine);
+  --color-selective-yellow: var(--selective-yellow);
+  --color-medium-slate-blue: var(--medium-slate-blue);
+  --color-tekhelet: var(--tekhelet);
+  --color-persimmon: var(--persimmon);
+  /* For fonts */
+  --font-montserrat: var(--montserrat);
+  --font-poppins: var(--poppins);
+  --font-lato: var(--lato);
+}

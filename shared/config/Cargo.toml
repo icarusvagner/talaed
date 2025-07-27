@@ -1,0 +1,13 @@
+[package]
+name = "talaed-config"
+version.workspace = true
+authors.workspace = true
+description.workspace = true
+license.workspace = true
+edition.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+lib-utils.workspace = true

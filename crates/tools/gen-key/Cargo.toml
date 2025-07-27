@@ -1,0 +1,13 @@
+[package]
+name = "gen-key"
+version.workspace = true
+authors.workspace = true
+description.workspace = true
+license.workspace = true
+edition.workspace = true
+
+[dependencies]
+# -- App Crates
+lib-utils = { path = "../../libs/lib-utils"}
+# -- Others
+rand = "0.8"
