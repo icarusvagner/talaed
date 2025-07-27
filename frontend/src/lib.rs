@@ -1,14 +1,14 @@
-use leptoaster::{provide_toaster, Toaster};
+use leptoaster::{Toaster, provide_toaster};
 use leptos::prelude::*;
 use leptos_meta::*;
-use leptos_router::{components::*, StaticSegment};
+use leptos_router::{StaticSegment, components::*};
 
-// Modules
+/// Modules
 mod components;
 mod layouts;
 mod pages;
 
-// Top-Level pages
+/// Top-Level pages
 use crate::{layouts::*, pages::*};
 
 /// An app router which renders the homepage and handles 404's
@@ -31,19 +31,14 @@ pub fn App() -> impl IntoView {
 		// inject toaster to the root body
 		<Toaster stacked=true />
 
-		<main class="min-h-screen">
-			<Router>
-				<Routes fallback=|| view! { <NotFound /> }>
-					<Route path=StaticSegment("login") view=LoginRoute />
-					<Route
-						path=StaticSegment("getstarted")
-						view=RegisterRoute
-					/>
-					<ParentRoute path=StaticSegment("home") view=MainLayout>
-						<Route path=StaticSegment("") view=Home />
-					</ParentRoute>
-				</Routes>
-			</Router>
-		</main>
+		<Router>
+			<Routes fallback=|| view! { <NotFound /> }>
+				<Route path=StaticSegment("login") view=LoginRoute />
+				<Route path=StaticSegment("getstarted") view=RegisterRoute />
+				<ParentRoute path=StaticSegment("home") view=MainLayout>
+					<Route path=StaticSegment("") view=Home />
+				</ParentRoute>
+			</Routes>
+		</Router>
 	}
 }
